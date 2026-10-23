@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DEKMNS — พรีวิวดีไซน์</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#087A46;--gd:#075532;--gb:#19B86A;--gs:#EAF8F0;--bg:#F7F9FC;--sf:#fff;--tx:#172033;--t2:#687386;--bd:#E5EAF0;--red:#dc2626;--blue:#2563eb;--vio:#7c3aed;--org:#ea580c;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f172a;--sf:#1e293b;--tx:#f1f5f9;--t2:#94a3b8;--bd:#334155;--gs:#12372a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f172a;--sf:#1e293b;--tx:#f1f5f9;--t2:#94a3b8;--bd:#334155;--gs:#12372a;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:'IBM Plex Sans Thai',system-ui,sans-serif;background:var(--bg);color:var(--tx);padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+.banner{background:#fef3c7;color:#92400e;font-size:12px;padding:8px 14px;text-align:center}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .banner{background:#422006;color:#fde68a}}
+header.top{max-width:1040px;margin:0 auto;padding:16px 16px 0}
+h1{font-size:20px;margin:0 0 4px}.sub{font-size:13px;color:var(--t2);margin:0 0 14px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.tab{border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:999px;padding:9px 16px;font:600 13px inherit;font-family:inherit;cursor:pointer}
+.tab[aria-selected=true]{background:var(--g);border-color:var(--g);color:#fff}
+.tab:focus-visible,button:focus-visible{outline:2px solid var(--g);outline-offset:2px}
+main{max-width:1040px;margin:0 auto;padding:12px 16px 40px}
+.screen{display:none}.screen.on{display:block}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:24px;padding:18px}
+.phone{max-width:420px;margin:0 auto}
+.id{display:flex;gap:14px;align-items:center}
+.av{width:84px;height:84px;border-radius:50%;background:var(--gs);color:var(--g);display:grid;place-items:center;font-size:30px;font-weight:700;flex:none}
+.nm{font-size:21px;font-weight:700;line-height:1.2;word-break:break-word}
+.mut{color:var(--t2);font-size:13px}
+.badge{display:inline-block;margin-top:8px;background:var(--gs);color:var(--g);font-size:12px;font-weight:500;padding:4px 10px;border-radius:999px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin:18px 0 0}
+.stats div{text-align:center;padding:0 6px;border-left:1px solid var(--bd)}.stats div:first-child{border:0}
+.stats b{display:block;font-size:18px}.stats span{font-size:12px;color:var(--t2)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.btn{height:46px;border-radius:999px;border:0;font:600 14px inherit;font-family:inherit;cursor:pointer}
+.b1{background:var(--tx);color:var(--bg)}.b2{background:var(--bd);color:var(--tx)}
+.ptabs{display:flex;gap:22px;border-bottom:1px solid var(--bd);margin:18px 4px 0}
+.ptabs span{padding:0 0 10px;font-weight:600;font-size:15px;color:var(--t2)}.ptabs .a{color:var(--tx);border-bottom:2px solid var(--g)}
+.rows div{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--bd);font-size:14px}
+.rows div:last-child{border:0}.rows dt{color:var(--t2)}.rows dd{margin:0;font-weight:500;text-align:right;word-break:break-all}
+.seg{display:inline-flex;background:var(--bd);border-radius:999px;padding:4px;width:100%;max-width:420px}
+.seg button{flex:1;height:42px;border:0;border-radius:999px;background:transparent;color:var(--t2);font:600 14px inherit;font-family:inherit;cursor:pointer}
+.seg button[aria-selected=true]{background:var(--sf);color:var(--tx);box-shadow:0 1px 3px #0002}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;margin-top:10px}
+.cal i{font-style:normal;font-size:12px;color:var(--t2);padding:6px 0}
+.cal button{height:46px;border:0;border-radius:14px;background:transparent;color:var(--tx);font:14px inherit;font-family:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.cal button.t{background:var(--gs);color:var(--g);font-weight:700}.cal button.s{background:var(--acc);color:#fff;font-weight:700}
+.cal u{display:flex;gap:2px;height:6px}.cal u s{width:6px;height:6px;border-radius:50%}
+.lay{display:grid;gap:16px}@media(min-width:860px){.lay{grid-template-columns:1fr 330px}}
+.ev{display:flex;gap:10px;padding:12px;border:1px solid var(--bd);border-radius:16px;margin-top:8px;background:var(--sf)}
+.ev i{width:5px;border-radius:9px;flex:none}.ev b{display:block;font-size:14px}.ev span{font-size:12px;color:var(--t2)}
+.pill{margin-left:auto;align-self:flex-start;font-size:11px;padding:2px 9px;border-radius:999px;background:var(--gs);color:var(--g);white-space:nowrap}
+.warn{background:#fef3c7;color:#92400e;border-radius:14px;padding:10px 12px;font-size:13px;margin-top:12px}
+.leg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--t2);margin-top:10px}.leg s{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:700px){.kpis{grid-template-columns:repeat(3,1fr)}}
+.kpi{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:14px}.kpi b{font-size:24px;display:block}.kpi span{font-size:13px;font-weight:500}.kpi small{display:block;font-size:11px;color:var(--t2);margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:13px}th{font-size:12px;color:var(--t2);text-align:left;padding:10px 8px;background:var(--bg)}td{padding:11px 8px;border-top:1px solid var(--bd)}
+.wrap{overflow-x:auto}.st{padding:3px 10px;border-radius:999px;font-size:12px;font-weight:500;white-space:nowrap}
+.s0{background:var(--bd);color:var(--t2)}.s1{background:#fef3c7;color:#92400e}.s2{background:#dcfce7;color:#166534}
+.bars{display:flex;align-items:flex-end;gap:5px;height:130px;margin-top:10px}.bars i{flex:1;background:var(--g);border-radius:5px 5px 0 0;opacity:.9}
+@media(prefers-reduced-motion:no-preference){.screen.on{animation:f .25s ease}}@keyframes f{from{opacity:0;transform:translateY(6px)}}
+.theme{float:right;border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:999px;padding:6px 12px;font:12px inherit;font-family:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="banner">พรีวิวดีไซน์เท่านั้น — ชื่อ ตัวเลข และกิจกรรมทั้งหมดในหน้านี้เป็น <b>ข้อมูลสมมติ</b> ไม่ใช่ข้อมูลจริงจากระบบ</div>
+<header class="top">
+  <button class="theme" id="th" aria-label="สลับธีม">โหมดมืด/สว่าง</button>
+  <h1>DEKMNS — พรีวิวหน้าที่ปรับปรุง</h1>
+  <p class="sub">แตะแท็บเพื่อสลับหน้า · ใช้ได้ทั้งมือถือและคอมพิวเตอร์</p>
+  <div class="tabs" role="tablist" id="nav">
+    <button class="tab" role="tab" aria-selected="true" data-s="profile">โปรไฟล์</button>
+    <button class="tab" role="tab" aria-selected="false" data-s="cal">ปฏิทิน 2 โหมด</button>
+    <button class="tab" role="tab" aria-selected="false" data-s="reg">Admin: ลำดับผู้ใช้</button>
+    <button class="tab" role="tab" aria-selected="false" data-s="rooms">Admin: ตามห้อง</button>
+  </div>
+</header>
+<main>
+
+<section class="screen on" id="profile">
+  <div class="phone">
+    <div class="card">
+      <div class="id"><div class="av" aria-hidden="true">สม</div>
+        <div><div class="nm">สมชาย ตัวอย่างดี</div><div class="mut">ม.5/2 · โรงเรียนเมืองนครศรีธรรมราช</div><span class="badge">✓ ยืนยันข้อมูลนักเรียนแล้ว</span></div></div>
+      <p style="margin:16px 0 0;font-size:14px">“ชาย” · ชอบฟุตบอลและเขียนโค้ด</p>
+      <div class="stats"><div><b>ม.5/2</b><span>ชั้น/ห้อง</span></div><div><b>12</b><span>เลขที่</span></div><div><b>12345</b><span>รหัสนักเรียน</span></div></div>
+      <div class="btns"><button class="btn b1">ดูตารางเรียน</button><button class="btn b2">ออกจากระบบ</button></div>
+    </div>
+    <div class="ptabs"><span class="a">ข้อมูล</span><span>ตารางวันนี้</span><span>ร้องเรียน</span></div>
+    <div class="card rows" style="margin-top:14px;padding:4px 18px"><dl style="margin:0">
+      <div><dt>ชื่อ-นามสกุล</dt><dd>สมชาย ตัวอย่างดี</dd></div>
+      <div><dt>อีเมลโรงเรียน</dt><dd>12345@mns.ac.th</dd></div>
+      <div><dt>บทบาท</dt><dd>นักเรียน</dd></div>
+      <div><dt>เข้าร่วมเมื่อ</dt><dd>1 พ.ย. 2569</dd></div></dl></div>
+    <p class="mut" style="text-align:center;margin-top:12px">ถ้ายังไม่พบข้อมูลนักเรียน จะแสดงข้อความ “ยังไม่พบข้อมูลนักเรียน — ติดต่อผู้ดูแลระบบ” (ไม่เดาชื่อจากอีเมล)</p>
+  </div>
+</section>
+
+<section class="screen" id="cal">
+  <h1>ปฏิทินและกำหนดการ</h1>
+  <p class="sub">รวมทุกกิจกรรมสำคัญของ ม.น.ศ. และกำหนดการสำหรับ DEK70 ไว้ในที่เดียว</p>
+  <div class="seg" role="tablist" id="mode"><button role="tab" aria-selected="true" data-m="school">ปฏิทินกิจกรรม</button><button role="tab" aria-selected="false" data-m="dek">ปฏิทินสำหรับ DEK70</button></div>
+  <div id="dekinfo" style="display:none;margin-top:12px">
+    <b>ปฏิทิน DEK70</b><div class="mut">ติดตามกำหนดการสำคัญในการเตรียมตัวเข้ามหาวิทยาลัย</div>
+    <div class="mut" style="margin-top:4px">ซิงก์ข้อมูลล่าสุด: (แสดงเมื่อซิงก์สำเร็จจริงเท่านั้น) · <a href="https://doodee-future.com/th/calendar" target="_blank" rel="noopener" style="color:var(--blue)">เปิดเว็บไซต์ต้นทาง</a></div>
+    <div class="warn">⚠ ข้อมูลอาจยังไม่เป็นปัจจุบัน — ตัวอย่างข้อความเมื่อซิงก์ล้มเหลว</div>
+  </div>
+  <div class="leg" id="leg"></div>
+  <div class="lay" style="margin-top:12px">
+    <div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><button class="btn b2" style="height:38px;width:38px" aria-label="เดือนก่อนหน้า">‹</button><b>พฤศจิกายน 2569</b><button class="btn b2" style="height:38px;width:38px" aria-label="เดือนถัดไป">›</button></div>
+      <div class="cal" id="grid"></div>
+      <div id="day" style="margin-top:14px;border-top:1px solid var(--bd);padding-top:12px"></div></div>
+    <aside><b style="font-size:14px">กิจกรรมที่กำลังจะมาถึง</b><div id="up"></div></aside>
+  </div>
+</section>
+
+<section class="screen" id="reg">
+  <h1>ลำดับผู้ใช้งาน</h1><p class="sub">ผู้ใช้ทั้งหมด 6 คน · ลำดับลงทะเบียนล่าสุด #3 (ข้อมูลสมมติ)</p>
+  <div class="tabs"><button class="tab" aria-selected="true">ลำดับลงทะเบียน</button><button class="tab" aria-selected="false">ลำดับเข้าใช้ครั้งแรก</button><button class="tab" aria-selected="false">กิจกรรมล่าสุด</button></div>
+  <div class="card wrap" style="padding:0"><table style="min-width:620px"><thead><tr><th>ลำดับ</th><th>ชื่อ-นามสกุล</th><th>ชั้น/ห้อง</th><th>ลงทะเบียน</th><th>เข้าใช้ครั้งแรก</th><th>ล่าสุด</th></tr></thead><tbody>
+  <tr><td><b style="color:var(--g)">#1</b></td><td>สมชาย ตัวอย่างดี<br><span class="mut">12345@mns.ac.th</span></td><td>ม.5/2</td><td>1 พ.ย. 09:12</td><td>1 พ.ย. 09:13</td><td>3 พ.ย. 18:40</td></tr>
+  <tr><td><b style="color:var(--g)">#2</b></td><td>สมหญิง ตัวอย่างงาม<br><span class="mut">12346@mns.ac.th</span></td><td>ม.5/2</td><td>1 พ.ย. 09:15</td><td>2 พ.ย. 07:50</td><td>3 พ.ย. 12:05</td></tr>
+  <tr><td><b style="color:var(--g)">#3</b></td><td>ยังไม่เชื่อมข้อมูลนักเรียน<br><span class="mut">22222@mns.ac.th</span></td><td>—</td><td>2 พ.ย. 10:01</td><td>ยังไม่มีบันทึก</td><td>—</td></tr>
+  <tr><td class="mut" style="font-size:12px">ไม่มีข้อมูลย้อนหลัง</td><td>(บัญชีเก่าก่อนเปิดระบบติดตาม)<br><span class="mut">11111@mns.ac.th</span></td><td>ม.4/1</td><td class="mut">ไม่มีข้อมูลย้อนหลัง</td><td>—</td><td>—</td></tr></tbody></table></div>
+  <p class="mut" style="margin-top:10px">ค้นหาชื่อ/ชั้นห้อง · กรองช่วงวันที่ · แบ่งหน้าฝั่งเซิร์ฟเวอร์ · ส่งออก CSV · ถ้าเวลาตรงกัน เรียงด้วย ID ให้ลำดับคงที่</p>
+</section>
+
+<section class="screen" id="rooms">
+  <h1>สถิติผู้ใช้งานตามห้อง</h1><p class="sub">ดูว่าห้องไหนเริ่มใช้ DEKMNS แล้วบ้าง (ข้อมูลสมมติ)</p>
+  <div class="kpis"><div class="kpi"><b>2</b><span>ห้องที่มีผู้ใช้งาน</span><small>จาก 3 ห้องในฐานข้อมูล</small></div><div class="kpi"><b>5</b><span>นักเรียนเข้าใช้แล้ว</span><small>จาก 10 คน</small></div><div class="kpi"><b>50%</b><span>อัตราเข้าถึงรวม</span><small>เคยเข้า ÷ นักเรียนทั้งหมด</small></div></div>
+  <div class="card" style="margin-top:12px"><b style="font-size:14px">อัตราการเข้าถึงตามห้อง (%)</b><div class="bars" aria-hidden="true"><i style="height:80%"></i><i style="height:45%"></i><i style="height:4%"></i></div><div class="mut" style="display:flex;justify-content:space-around;margin-top:4px"><span>ม.5/2</span><span>ม.4/1</span><span>ม.6/3</span></div></div>
+  <div class="card wrap" style="padding:0;margin-top:12px"><table style="min-width:560px"><thead><tr><th>ห้อง</th><th>นักเรียน</th><th>เคยเข้า</th><th>7 วัน</th><th>เข้าถึง</th><th>สถานะ</th></tr></thead><tbody>
+  <tr><td><b>ม.5/2</b></td><td>4</td><td>3</td><td>2</td><td>75%</td><td><span class="st s2">มีการใช้งานต่อเนื่อง</span></td></tr>
+  <tr><td><b>ม.4/1</b></td><td>4</td><td>2</td><td>0</td><td>50%</td><td><span class="st s1">เริ่มมีผู้ใช้งาน</span></td></tr>
+  <tr><td><b>ม.6/3</b></td><td>2</td><td>0</td><td>0</td><td>0%</td><td><span class="st s0">ยังไม่มีผู้ใช้งาน</span></td></tr></tbody></table></div>
+  <p class="mut" style="margin-top:10px">เกณฑ์: ต่อเนื่อง = ผู้ใช้ 7 วันล่าสุด ≥ 30% ของห้อง · เริ่มมี = มีคนเข้าแต่ต่ำกว่านั้น · ห้องที่ไม่มีข้อมูลนักเรียนจะแสดง “ข้อมูลไม่เพียงพอ” แทน 0%</p>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$$('#nav .tab').forEach(b=>b.onclick=()=>{$$('#nav .tab').forEach(x=>x.setAttribute('aria-selected',x===b));$$('.screen').forEach(s=>s.classList.toggle('on',s.id===b.dataset.s));});
+const E={school:{acc:'#087A46',cats:{'กิจกรรมโรงเรียน':'#087A46','สภานักเรียน':'#7c3aed','สอบ':'#dc2626','วันสำคัญ':'#ea580c'},ev:[[3,'ประชุมสภานักเรียน','สภานักเรียน','ตลอดวัน'],[10,'สอบกลางภาค (ตัวอย่าง)','สอบ','08:30–12:00'],[15,'กิจกรรมกีฬาสี (ตัวอย่าง)','กิจกรรมโรงเรียน','ตลอดวัน'],[24,'วันสำคัญ (ตัวอย่าง)','วันสำคัญ','ตลอดวัน']]},
+dek:{acc:'#2563eb',cats:{'รับสมัคร':'#2563eb','สอบ':'#0891b2','ประกาศผล':'#7c3aed'},ev:[[5,'เปิดรับสมัครรอบ 1 (ตัวอย่าง)','รับสมัคร','ตลอดวัน'],[12,'สอบวิชาเฉพาะ (ตัวอย่าง)','สอบ','09:00–12:00'],[20,'ประกาศผล (ตัวอย่าง)','ประกาศผล','ตลอดวัน']]}};
+let mode='school',sel=3;
+function draw(){const m=E[mode];document.documentElement.style.setProperty('--acc',m.acc);
+$('#leg').innerHTML=Object.entries(m.cats).map(([k,c])=>`<span><s style="background:${c}"></s>${k}</span>`).join('');
+$('#dekinfo').style.display=mode==='dek'?'block':'none';
+const first=0; // 1 Nov 2026 is a Sunday
+let h=['อา','จ','อ','พ','พฤ','ศ','ส'].map(d=>`<i>${d}</i>`).join('');for(let i=0;i<first;i++)h+='<span></span>';
+for(let d=1;d<=30;d++){const ev=m.ev.filter(e=>e[0]===d);h+=`<button class="${d===sel?'s':d===3?'t':''}" data-d="${d}" aria-label="${d} พฤศจิกายน${ev.length?' มี '+ev.length+' กิจกรรม':''}">${d}<u>${ev.map(e=>`<s style="background:${d===sel?'#fff':m.cats[e[2]]}"></s>`).join('')}</u></button>`}
+$('#grid').innerHTML=h;$$('#grid button').forEach(b=>b.onclick=()=>{sel=+b.dataset.d;draw()});
+const row=e=>`<div class="ev"><i style="background:${m.cats[e[2]]}"></i><div><b>${e[1]}</b><span>${e[0]} พ.ย. · ${e[3]}</span></div><span class="pill">กำลังจะมาถึง</span></div>`;
+const de=m.ev.filter(e=>e[0]===sel);$('#day').innerHTML=`<b style="font-size:14px">${sel} พฤศจิกายน 2569</b>`+(de.length?de.map(row).join(''):'<p class="mut">ไม่มีกิจกรรมในวันที่เลือก</p>');
+$('#up').innerHTML=m.ev.map(row).join('')}
+$$('#mode button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;$$('#mode button').forEach(x=>x.setAttribute('aria-selected',x===b));draw()});
+draw();
+$('#th').onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);r.dataset.theme=dark?'light':'dark'};
+</script>
+</body>
+</html>
